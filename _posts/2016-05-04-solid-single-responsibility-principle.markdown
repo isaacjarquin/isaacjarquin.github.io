@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Single Responsibility Principle
-date:   2016-05-04 12:20:00
+date:   2016-05-03 12:20:00
 author: Isaac Jarquin
 categories: Sofware (Object Oriented Design)
 image: /images/blogs/object-oriented-design/solid/solid_single_responsability_principle.jpg
