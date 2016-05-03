@@ -4,12 +4,7 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Im Isaac Jarquin, originally from Gran Canaria, hence my like for water sports such as Surf, buggy board, swimming ... I'm currently working for Sky UK, a well establish company set in UK. I have about 6 years of experience in Ruby and OOP in general and I'm started to get very exited passionate about functional programming and currently learning elixir.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+Living in the uk makes practicing surf a bit complicated so in my free time I also like to go hiking, practice sports, preferible outdoors and read. 
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
