@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Pattern Matching"
+title:  Pattern Matching
 date:   2016-05-15 11:22:30
 author: Isaac Jarquin
 image: /images/blogs/functional-programming/pattern-matching.jpg
