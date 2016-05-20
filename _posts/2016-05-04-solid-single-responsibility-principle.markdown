@@ -6,6 +6,7 @@ author: Isaac Jarquin
 categories: Sofware (Object Oriented Design)
 image: /images/blogs/object-oriented-design/solid/solid_single_responsability_principle.jpg
 excerpt: "How to write clean, maintainable code"
+comments: true
 resume: "The Single responsibility principle is one of the famous SOLID principles. The solid principles are a group of good practices that allow you to write better and cleaner code in a way that is easy to maintain, reusable, highly cohesive and strongly decoupled ..."
 ---
 

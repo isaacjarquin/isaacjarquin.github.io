@@ -5,6 +5,7 @@ date:   2016-05-15 11:22:30
 author: Isaac Jarquin
 image: /images/blogs/functional-programming/pattern-matching.jpg
 excerpt: "Functional Programming thinking"
+comments: true
 resume: "Like many developers, I come from an OOP background. Throughout my time as an OOP developer, I have encountered its strengths and weaknesses. I believe that many of the weaknesses can be overcome through functional programming paradigms, and I want to demonstrate exactly how through an example involving pattern matching ..."
 ---
 
