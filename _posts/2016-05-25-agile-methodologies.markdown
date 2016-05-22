@@ -3,6 +3,7 @@ layout: post
 title:  "Agile Methodologies"
 date:   2016-06-01 11:22:30
 author: Isaac Jarquin
+categories: agile
 image: /images/blogs/agile/agile.jpg
 excerpt: "A short introduction to Agile"
 comments: true
