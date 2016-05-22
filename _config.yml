@@ -11,7 +11,7 @@ email: isaacjarquin@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Series of posts about software engineering and best practices. We will talk about OOP, functional programming and Agile best practices.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://isaacjarquin.github.io" # the base hostname & protocol for your site
 twitter_username: "@ijarquinmedina"
 github_username: isaacjarquin
 
