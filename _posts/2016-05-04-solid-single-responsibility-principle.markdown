@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  Single Responsibility Principle
+description: what is single responsibility principle and how can I use it to improve readability and maintainability in my code.
 date:   2016-05-03 12:20:00
 author: Isaac Jarquin
-categories: Sofware (Object Oriented Design)
+categories: software
 image: /images/blogs/object-oriented-design/solid/solid_single_responsability_principle.jpg
 excerpt: "How to write clean, maintainable code"
 comments: true

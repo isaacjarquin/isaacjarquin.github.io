@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  Pattern Matching
+description: Discover how pattern matching works in functions and how can we use it to solve some of the problems caused by using conditionals.
 date:   2016-05-15 11:22:30
 author: Isaac Jarquin
+categories: software
 image: /images/blogs/functional-programming/pattern-matching.jpg
 excerpt: "Functional Programming thinking"
 comments: true
