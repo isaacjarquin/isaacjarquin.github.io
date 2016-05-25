@@ -4,7 +4,6 @@ title:  Single Responsibility Principle
 date:   2016-05-03 12:20:00
 author: Isaac Jarquin
 categories: software
-image: /images/blogs/object-oriented-design/solid/solid_single_responsability_principle.jpg
 excerpt: What is single responsibility principle and how can I use it to improve readability and maintainability in my code.
 comments: true
 resume: "The Single responsibility principle is one of the famous SOLID principles. The solid principles are a group of good practices that allow you to write better and cleaner code in a way that is easy to maintain, reusable, highly cohesive and strongly decoupled ..."
