@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  "Agile Methodologies"
+title:  Agile Methodologies
 date:   2016-06-01 10:00:00
 author: Isaac Jarquin
 categories: agile
-image: /images/blogs/agile/agile.jpg
-excerpt: "A short introduction to Agile"
+excerpt: A short introduction to Agile
 comments: true
 resume: "The use of the word agile derives from the agile manifesto. A small group of people got together in 2001 to discuss their feelings that the traditional approach to managing software development projects was failing far too often. They came up with the agile manifesto, which describes 4 important values that are as relevant today as they were then ..."
 ---
