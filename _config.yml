@@ -14,6 +14,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://isaacjarquin.github.io" # the base hostname & protocol for your site
 twitter_username: "@ijarquinmedina"
 github_username: isaacjarquin
+gems:
+  - jekyll-seo-tag
 
 # Build settings
 markdown: kramdown
