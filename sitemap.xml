@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	{% for post in site.posts %}
-	<url>
-		<loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
-		<lastmod>{{ post.date | date:"%F" }}</lastmod>
-		<changefreq>never</changefreq>
-	</url>
-	{% endfor %}
-
-	{% for page in site.pages %}
-		{% if page.noindex != true %}
-		{% if page.layout != nil %}
-		{% if page.layout != 'atom' %}
-		{% if page.layout != 'rss' %}
-		<url>
-			<loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
-		</url>
-		{% endif %}
-		{% endif %}
-		{% endif %}
-		{% endif %}
-	{% endfor %}
-</urlset>
+   <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+     <sitemap>
+        <loc>http://isaacjarquin.github.io/software/2017/02/01/solid-dependency-inversion-principle</loc>
+        <lastmod>2017-03-08</lastmod>
+     </sitemap>
+     <sitemap>
+        <loc>http://isaacjarquin.github.io/software/2016/09/27/solid-liskov-substitution-principle</loc>
+        <lastmod>2017-03-08</lastmod>
+     </sitemap>
+     <sitemap>
+        <loc>http://isaacjarquin.github.io/software/2016/08/19/solid-interface-segregation-principle</loc>
+        <lastmod>2017-03-08</lastmod>
+     </sitemap>
+     <sitemap>
+        <loc>http://isaacjarquin.github.io/software/2016/07/01/solid-open-closed-principle</loc>
+        <lastmod>2017-03-08</lastmod>
+     </sitemap>
+     <sitemap>
+        <loc>http://isaacjarquin.github.io/agile/2016/06/01/agile-methodologies</loc>
+        <lastmod>2017-03-08</lastmod>
+     </sitemap>
+     <sitemap>
+        <loc>http://isaacjarquin.github.io/software/2016/05/15/fp-pattern-matching</loc>
+        <lastmod>2017-03-08</lastmod>
+     </sitemap>
+     <sitemap>
+        <loc>http://isaacjarquin.github.io/software/2016/05/03/solid-single-responsibility-principle</loc>
+        <lastmod>2017-03-08</lastmod>
+     </sitemap>
+   </sitemapindex>
