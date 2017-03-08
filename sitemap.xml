@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-   <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <sitemap>
-        <loc>software/2017/02/01/solid-dependency-inversion-principle</loc>
-        <lastmod>2017-03-08</lastmod>
-     </sitemap>
-     <sitemap>
-        <loc>software/2016/09/27/solid-liskov-substitution-principle</loc>
-        <lastmod>2017-03-08</lastmod>
-     </sitemap>
-     <sitemap>
-        <loc>software/2016/08/19/solid-interface-segregation-principle</loc>
-        <lastmod>2017-03-08</lastmod>
-     </sitemap>
-     <sitemap>
-        <loc>software/2016/07/01/solid-open-closed-principle</loc>
-        <lastmod>2017-03-08</lastmod>
-     </sitemap>
-     <sitemap>
-        <loc>agile/2016/06/01/agile-methodologies</loc>
-        <lastmod>2017-03-08</lastmod>
-     </sitemap>
-     <sitemap>
-        <loc>software/2016/05/15/fp-pattern-matching</loc>
-        <lastmod>2017-03-08</lastmod>
-     </sitemap>
-     <sitemap>
-        <loc>software/2016/05/03/solid-single-responsibility-principle</loc>
-        <lastmod>2017-03-08</lastmod>
-     </sitemap>
-   </sitemapindex>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://isaacjarquin.github.io/</loc>
+  <lastmod>2017-03-08T20:18:28+00:00</lastmod>
+</url>
+<url>
+  <loc>http://isaacjarquin.github.io/software/2017/02/01/solid-dependency-inversion-principle.html</loc>
+  <lastmod>2017-03-08T20:18:28+00:00</lastmod>
+</url>
+<url>
+  <loc>http://isaacjarquin.github.io/software/2016/09/27/solid-liskov-substitution-principle.html</loc>
+  <lastmod>2017-03-08T20:18:28+00:00</lastmod>
+</url>
+<url>
+  <loc>http://isaacjarquin.github.io/software/2016/08/19/solid-interface-segregation-principle.html</loc>
+  <lastmod>2017-03-08T20:18:28+00:00</lastmod>
+</url>
+<url>
+  <loc>http://isaacjarquin.github.io/software/2016/07/01/solid-open-closed-principle.html</loc>
+  <lastmod>2017-03-08T20:18:28+00:00</lastmod>
+</url>
+<url>
+  <loc>http://isaacjarquin.github.io/agile/2016/06/01/agile-methodologies.html</loc>
+  <lastmod>2017-03-08T20:18:28+00:00</lastmod>
+</url>
+<url>
+  <loc>http://isaacjarquin.github.io/software/2016/05/15/fp-pattern-matching.html</loc>
+  <lastmod>2017-03-08T20:18:28+00:00</lastmod>
+</url>
+<url>
+  <loc>http://isaacjarquin.github.io/software/2016/05/03/solid-single-responsibility-principle.html</loc>
+  <lastmod>2017-03-08T20:18:28+00:00</lastmod>
+</url>
+<url>
+  <loc>http://isaacjarquin.github.io/about/</loc>
+  <lastmod>2017-03-08T20:18:28+00:00</lastmod>
+</url>
+</urlset>
