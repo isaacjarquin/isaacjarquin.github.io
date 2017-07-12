@@ -43,6 +43,18 @@ $on-laptop:        800px;
     }
 }
 
+img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.image-full-width {
+  width: 100%;
+}
+
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
