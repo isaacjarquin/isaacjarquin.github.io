@@ -6,7 +6,7 @@ author: Isaac Jarquin
 categories: software
 excerpt: What is all this let it crash motto than Erlang and Elixir people talk about all the time ?.
 comments: true
-resume: "The first time a heard about Erlang and Elixir I was very confused about that 'Let it crash' motto that everyone was talking about. This is probably one of the few reason why I like elixir. Surely you shouldn’t let your system crash I thought back in time. Why would I let my system crash and annoy a lot of my customers ? So what was all of this about it ?"
+resume: "The first time I heard about Erlang and Elixir I was very confused about that 'Let it crash' motto that everyone was talking about. This is probably one of the few reason why I like elixir. Surely you shouldn’t let your system crash I thought back in time. Why would I let my system crash and annoy a lot of my customers ? So what was all of this about it ?"
 ---
 
 ![shared](/images/functional-programming/erlang/let-it-crash.jpg){: .image-full-width}
