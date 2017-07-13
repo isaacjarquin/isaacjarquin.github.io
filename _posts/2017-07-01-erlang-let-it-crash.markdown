@@ -6,14 +6,14 @@ author: Isaac Jarquin
 categories: software
 excerpt: What is all this let it crash motto than Erlang and Elixir people talk about all the time ?.
 comments: true
-resume: "The first time I heard about Erlang and Elixir I was very confused about that 'Let it crash' motto that everyone was talking about. This is probably now one of the few reason why I like elixir. Surely you shouldn’t let your system crash I thought back in time. Why would I let my system crash and annoy a lot of my customers ? So what was all of this about it ?"
+resume: "When I first started becoming interested in Erlang and Elixir I was very confused about that 'Let it crash' motto that everyone was talking about. This is probably now one of the few reason why I like elixir. Surely you shouldn’t let your system crash I thought back in time. Why would I let my system crash and annoy a lot of my customers ? So what was all of this about it ?"
 ---
 
 ![shared](/images/functional-programming/erlang/let-it-crash.jpg){: .image-full-width}
 
 ## Let it crash and we will handle it for you.
 
-The first time I heard about Erlang and Elixir I was very confused about that "Let it crash" motto that everyone was talking about. This is probably now one of the few reason why I like elixir. Surely you shouldn’t let your system crash I thought back in time. Why would I let my system crash and annoy a lot of my customers ? So what was all of this about it ? Erlang and elixir was supposed to be great for concurrency and fault tolerance, and here I was being told to let things crash. So let’s dig a bit into it to see what they really mean about that. Imagine you could control your system in a way that can let crash things that are not critical and recover automatically right after the crash in a known stable state, so no one will actually notice that your system has crashed. Im sure you have heard the have you try turning it off and on again motto in IT.
+When I first started becoming interested in Erlang and Elixir I was very confused about that "Let it crash" motto that everyone was talking about. This is probably now one of the few reason why I like elixir. Surely you shouldn’t let your system crash I thought back in time. Why would I let my system crash and annoy a lot of my customers ? So what was all of this about it ? Erlang and elixir was supposed to be great for concurrency and fault tolerance, and here I was being told to let things crash. So let’s dig a bit into it to see what they really mean about that. Imagine you could control your system in a way that can let crash things that are not critical and recover automatically right after the crash in a known stable state, so no one will actually notice that your system has crashed. Im sure you have heard the have you try turning it off and on again motto in IT.
 
 ![shared](/images/functional-programming/erlang/itcrowd-turn-off-on.jpg)
 
