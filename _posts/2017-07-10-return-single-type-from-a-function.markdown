@@ -29,7 +29,7 @@ const hasMissingProductContent = products => {
 {% endhighlight %}
 
 
-While I was quite happy with the first two functions, I wasn’t entirely happy with the third one but I couldn’t think of an improvement at the time so I decided to create a PR and see if anyone could come up with a more elegant solution. One of the things that someone suggested was to remove the else because undefined is also falsey, and this will make the code to look less verbose too. While this is true, the fact that we are now returning two different types of data from the same function (boolean or undefined) made me worry. Before we go into details about why this is a very bad idea let's go back first to the very basics of functional programming.
+While I was quite happy with the first two functions, I wasn’t entirely happy with the third one but I couldn’t think of an improvement at the time so I decided to create a PR and see if anyone could come up with a more elegant solution. One of the things that someone suggested was to remove the else because undefined is also falsey, and this will make the code to look less verbose too. While this is true, the fact that we are now returning two different types of data from the same function (boolean or undefined) made me worry. Before we go into details about why this is a bad idea let's go back first to the very basics of functional programming.
 
 Functional Programming is about data transformations, and the workflow usually goes as follow:
 
@@ -94,7 +94,7 @@ const hasMissingProductContent = products => {
 
 {% endhighlight %}
 
-Diving in deeper, if products has already been forced, by whoever who pass it into the function to be an array, we could even have something like
+I know that I am still using a conditional, but things are starting to look a bit better now. Analyzing farther, if products has already been forced, by whoever who pass it into the function to be an array, we could remove the conditional logic all together and have something like:
 
 {% highlight ruby %}
 
