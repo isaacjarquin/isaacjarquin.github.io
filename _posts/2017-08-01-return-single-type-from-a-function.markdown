@@ -9,7 +9,7 @@ comments: true
 resume: "While these sorts of problems affect equally both functional and OOP programming, we are going to be talking primarily about functional programming, mainly because the style of coding used in this example is functional, but everything in this post can be extrapolated into the OOP world ..."
 ---
 
-## If you have a function returning two different types of data, then you are not doing it right.
+## If you have a function returning two different types of data, you are not doing it right.
 
 While these sorts of problems affect equally both functional and OOP programming, we are going to be talking primarily about functional programming, mainly because the style of coding used in this example is functional, but everything in this post can be extrapolated into the OOP world.
 
