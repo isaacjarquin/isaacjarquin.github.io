@@ -1,15 +1,15 @@
 ---
 layout: post
 title:  Always return a single type from a function
-date:   2017-07-10 10:00:00
+date:   2017-08-01 10:00:00
 author: Isaac Jarquin
 categories: software
-excerpt:  Why returning differents types from a function is not a good Idea.
+excerpt:  Why returning different types from a function is not a good Idea.
 comments: true
-resume: "In functional programming, functions are first class citizens, this means that you can treat a function pretty much like any other variable, so you can pass a function to another function as a parameter."
+resume: "While these sorts of problems affect equally both functional and OOP programming, we are going to be talking primarily about functional programming, mainly because the style of coding used in this example is functional, but everything in this post can be extrapolated into the OOP world ..."
 ---
 
-## Why returning differents types from a function is not a good Idea.
+## If you have a function returning two different types of data, then you are not doing it right.
 
 While these sorts of problems affect equally both functional and OOP programming, we are going to be talking primarily about functional programming, mainly because the style of coding used in this example is functional, but everything in this post can be extrapolated into the OOP world.
 
