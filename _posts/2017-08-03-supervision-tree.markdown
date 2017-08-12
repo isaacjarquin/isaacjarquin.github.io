@@ -6,12 +6,12 @@ author: Isaac Jarquin
 categories: software
 excerpt:  Introduction to supervision trees in Erlang and Elixir.
 comments: true
-resume: "While these sorts of problems affect equally both functional and OOP programming, we are going to be talking primarily about functional programming, mainly because the style of coding used in this example is functional, but everything in this post can be extrapolated into the OOP world ..."
+resume: "In one of my previous post (Let it) we talk about how good Elixir and Erlang were at fault tolerance, and how they could restart an app when the app crashes so our customers wouldn’t notice any issues. We also mentioned that all of this was handle by the supervision tree ..."
 ---
 
 ## Have you try turn it off and on again ?
 
-In one of my previous post ([Let it crash](/software/2017/07/01/erlang-let-it-crash.html)) we talk about how good elixir and erlang were at fault tolerance, and how they could restart an app when the app crashes so our customers wouldn’t notice any issues. We also mentioned that all of this was handle by the supervision tree. So now is time to talk a bit about the supervision tree.
+In one of my previous post ([Let it crash](/software/2017/07/01/erlang-let-it-crash.html)) we talk about how good Erlang and Elixir were at fault tolerance, and how they could restart an app when the app crashes so our customers wouldn’t notice any issues. We also mentioned that all of this was handle by the supervision tree. So now is time to talk a bit about the supervision tree.
 
 In Elixir and Erlang, we have what are known as Supervisors. The responsibility of a supervisor is to check that a process is alive, and restart it if it dies.  A Supervisor can check for processes and other supervisors too. That way we can build a hierarchical process structure called a supervision tree. Supervision trees are a nice way to structure fault-tolerant applications, to isolate errors when they appear. The main idea of a supervision tree is to have a way to keep our software going in case of errors by just restarting the faulty processes.
 
