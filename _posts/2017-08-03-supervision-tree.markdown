@@ -95,11 +95,7 @@ This a fairly basic introduction the the world us supervisors and the supervisio
 
 ### Final thoughts
 
-Statically typed languages are a lot more strict and it won’t allow you to return two different types from a function - if you try that, the compiler will scream at you.
-
-Dynamically typed languages give you a lot more freedom to do what you please with your data and functions and this can be very powerful and useful in some situations, but with great power comes great responsibility - as we have shown, returning two different types of data from a function is not a very good idea and it will force others to add conditional logic to protect them against that ambiguity.
-
-There are tools in Javascript that help you avoid this issue, forcing functions to always return a single type - among the most popular ones are typeScript and Flow. These tools add type-checking to Javascript which allows you to force functions to always return a single type of value, and parameters passed into functions to be of a certain type.
+Fault tolerant systems like Erlang and Elixir will monitor your system silently in the background and they will react to failures, restarting a process if they crash. The beautiful outcome of this is that if your system crashes for unknown reasons, your customers won't notice unless there is something genuinely wrong with your code and the process keep crashing until Erlang give up. On top of that even if if there is something genuinely wrong with a particular bit of your code, Elixir and Erlang will isolate the problem so the only part of your system affected will be the one related to that particular process. All of this is handle by the supervision tree, and the best part of it is that it all comes for free in Erlang and Elixir.
 
 <b>References</b>
 
