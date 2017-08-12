@@ -76,7 +76,7 @@ The first supervisor will check the worker in charge of keeping  the endpoint up
 
 ![shared](/images/functional-programming/erlang/supervision-tree-mailer-worker-crashed.jpg)
 
-We can see that in the picture, the Mailer process has crashed but the fact that the mailer process has crashed, and we can’t send emails anymore, shouldn’t affect people making calls to the API to fetch or save some data, they are functionally independent from each other so errors in one shouldn’t affect the other.
+As we can see that in the picture, the Mailer process has crashed but the fact that the mailer process has crashed, and we can’t send emails anymore, shouldn’t affect people making calls to the API to fetch or save some data, they are functionally independent from each other so errors in one shouldn’t affect the other.
 
 Right after the crash the mailer supervisor will try to restart the worker again. The beauty here is that we will have isolated problems without affecting the rest of the system, creating a fault tolerant system.
 
