@@ -11,7 +11,7 @@ resume: "While these sorts of problems affect equally both functional and OOP pr
 
 ## Have you try turn it off and on again ?
 
-In one of my previous post (Let it crash) we talk about how good elixir and erlang were at fault tolerance, and how they could restart an app when the app crashes so our customers wouldn’t notice any issues. We also mentioned that all of this was handle by the supervision tree. So now is time to talk a bit about the supervision tree.
+In one of my previous post ([Let it crash](/software/2017/07/01/erlang-let-it-crash.html)) we talk about how good elixir and erlang were at fault tolerance, and how they could restart an app when the app crashes so our customers wouldn’t notice any issues. We also mentioned that all of this was handle by the supervision tree. So now is time to talk a bit about the supervision tree.
 
 In Elixir and Erlang, we have what are known as Supervisors. The responsibility of a supervisor is to check that a process is alive, and restart it if it dies.  A Supervisor can check for processes and other supervisors too. That way we can build a hierarchical process structure called a supervision tree. Supervision trees are a nice way to structure fault-tolerant applications, to isolate errors when they appear. The main idea of a supervision tree is to have a way to keep our software going in case of errors by just restarting the faulty processes.
 
@@ -95,7 +95,7 @@ This a fairly basic introduction the the world us supervisors and the supervisio
 
 ### Final thoughts
 
-Fault tolerant systems like Erlang and Elixir will monitor your system silently in the background and they will react to failures, restarting a process if they crash. The beautiful outcome of this is that if your system crashes for unknown reasons, your customers won't notice unless there is something genuinely wrong with your code and the process keep crashing until Erlang give up. On top of that even if if there is something genuinely wrong with a particular bit of your code, Elixir and Erlang will isolate the problem so the only part of your system affected will be the one related to that particular process. All of this is handle by the supervision tree, and the best part of it is that it all comes for free in Erlang and Elixir.
+Fault tolerant systems like Erlang and Elixir will monitor your system silently in the background and they will react to failures, restarting a process if they crash. The beautiful outcome of this is that if your system crashes for unknown reasons, your customers won't notice unless there is something genuinely wrong with your code and the process keep crashing until Erlang give up. On top of that even if if there is something genuinely wrong with a particular bit of code, Elixir and Erlang will isolate the problem so the only part of your system affected will be the one related to that particular process. All of this is handle by the supervision tree, and the best part of it is that it all comes for free in Erlang and Elixir.
 
 <b>References</b>
 
