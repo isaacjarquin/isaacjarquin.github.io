@@ -104,5 +104,3 @@ There are tools in Javascript that help you avoid this issue, forcing functions 
 <b>References</b>
 
 [Learn you some Erlang - supervisors](http://learnyousomeerlang.com/supervisors)
-
-[Refactoring, Improving the Design of Existing Code](https://books.google.co.uk/books/about/Refactoring.html?id=1MsETFPD3I0C)
