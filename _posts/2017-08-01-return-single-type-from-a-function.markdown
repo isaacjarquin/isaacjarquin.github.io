@@ -20,9 +20,9 @@ A couple of months ago I was working on a ticket with the purpose of showing an 
 const isNotHardware = product => product.type !== 'HARDWARE';
 const hasMissingContent = product => product.productContent === undefined;
 
-const hasMissingProductContent = products => {
+const nonHardwareProductsHasMissingContent = products => {
   if (products) {
-    return products.filter(isNotHardware).map(hasMissingContent).includes(true);
+    return products.filter(isNotHardware).some(hasMissingContent);
   }  else {
     return false
   }
@@ -52,8 +52,8 @@ Going back to the initial code, we want to filter the products that are not hard
 
 {% highlight ruby %}
 
-const hasMissingProductContent = products => {
-    products.filter(isNotHardware).map(hasMissingContent).includes(true);
+const nonHardwareProductsHasMissingContent = products => {
+    products.filter(isNotHardware).some(hasMissingContent);
 };
 
 {% endhighlight %}
@@ -64,9 +64,9 @@ This solution was great until I realised that products could actually return eit
 
 {% highlight ruby %}
 
-const hasMissingProductContent = products => {
+const nonHardwareProductsHasMissingContent = products => {
   if (products) {
-    products.filter(isNotHardware).map(hasMissingContent).includes(true);
+    products.filter(isNotHardware).some(hasMissingContent);
   }  
 };
 
@@ -76,9 +76,9 @@ But because I didn’t want to leave someone dealing with the same situation I h
 
 {% highlight ruby %}
 
-const hasMissingProductContent = products => {
+const nonHardwareProductsHasMissingContent = products => {
   if (products) {
-    return products.filter(isNotHardware).map(hasMissingContent).includes(true);
+    return products.filter(isNotHardware).some(hasMissingContent);
   }  else {
     return false
   }
@@ -90,9 +90,9 @@ In this case, because products can have two types, we had to add some logic to c
 
 {% highlight ruby %}
 
-const hasMissingProductContent = products => {
+const nonHardwareProductsHasMissingContent = products => {
     const customerProducts = products || [];
-    return customerProducts.filter(isNotHardware).map(hasMissingContent).includes(true);
+    return customerProducts.filter(isNotHardware).some(hasMissingContent);
 };
 
 {% endhighlight %}
@@ -101,11 +101,13 @@ I know that the conditional is still being used, but things are starting to look
 
 {% highlight ruby %}
 
-const hasMissingProductContent = products => products.filter(isNotHardware).map(hasMissingContent).includes(true);
+const nonHardwareProductsHasMissingContent = products => {
+    return customerProducts.filter(isNotHardware).some(hasMissingContent);
+};
 
 {% endhighlight %}
 
-TThis was the solution I was originally going to go with until I realised there could potentially be two different types of products. This solution is cleaner, simpler and easier to maintain in the future. Always returning a single type from a function will allow you and others to write more elegant code.
+This was the solution I was originally going to go with until I realised there could potentially be two different types of products. This solution is cleaner, simpler and easier to maintain in the future. Always returning a single type from a function will allow you and others to write more elegant code.
 
 ### Final thoughts
 
