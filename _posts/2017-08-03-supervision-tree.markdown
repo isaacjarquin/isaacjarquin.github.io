@@ -13,9 +13,9 @@ resume: "In one of my previous post (Let it) we talk about how good Elixir and E
 
 In one of my previous post ([Let it crash](/software/2017/07/01/erlang-let-it-crash.html)) we talked about how good Erlang and Elixir are at fault tolerance, and how they could restart an app when the app crashes, so our customers wouldn’t notice any issues. We also mentioned that all of this was handle by the supervision tree. So now is time to talk a bit about the supervision tree.
 
-In Elixir and Erlang, we have what are known as Supervisors. The responsibility of a supervisor is to check that a process is alive and restart it if it dies.  A Supervisor can check for processes and other supervisors too. That way we can build a hierarchical process structure called a supervision tree. Supervision trees are a nice way to structure fault-tolerant applications, to isolate errors when they appear. The main idea of a supervision tree is to have a way to keep our software going in case of errors by just restarting the faulty processes.
+In Elixir and Erlang, we have what are known as Supervisors. The responsibility of a supervisor is to check that a process (worker) is alive and restart it if it dies.  A Supervisor can check for processes and other supervisors too. That way we can build a hierarchical process structure called a supervision tree. Supervision trees are a nice way to structure fault-tolerant applications, to isolate errors when they appear. The main idea of a supervision tree is to have a way to keep our software going in case of errors by just restarting the faulty processes.
 
-![shared](/images/functional-programming/erlang/supervision-tree-general.jpg)
+![shared](/images/functional-programming/erlang/supervision-tree-example.png)
 
 
 If a worker dies, the supervisor can restart the dead worker and its children if it has any. The way that the process will get restarted, it will depend on the strategy selected. Supervisors support different supervision strategies :
