@@ -11,9 +11,9 @@ resume: "In one of my previous post (Let it) we talk about how good Elixir and E
 
 ## Have you try turn it off and on again ?
 
-In one of my previous post ([Let it crash](/software/2017/07/01/erlang-let-it-crash.html)) we talked about how good Erlang and Elixir are at fault tolerance, and how they could restart an app when it crashes, so our customers wouldn’t notice any issues. We also mentioned that all of this was handled by the supervision tree. So now is time to talk a bit about the supervision tree.
+In one of my previous post ([Let it crash](/software/2017/07/01/erlang-let-it-crash.html)) we talked about how good Erlang and Elixir are at fault tolerance, and how they could restart an app when it crashes, so it wouldn’t cause any impact in our customers. We also mentioned that all of this was handled by the supervision tree. So now is time to talk a bit about the supervision tree.
 
-In Elixir and Erlang, we have what are known as Supervisors. The responsibility of a supervisor is to check that a process (worker) is alive and restart it if it's dead.  A Supervisor can check for processes and other supervisors too. That way we can build a hierarchical process structure called supervision tree. Supervision trees are a nice way to structure fault-tolerant applications, to isolate errors when they appear. The main idea of a supervision tree is to have a way to keep our software going in case of errors by just restarting the faulty processes.
+In Elixir and Erlang, we have what are known as Supervisors. The responsibility of a supervisor is to check that a process (worker) is alive and restart it if it's dead. A process is The basic unit of Erlang/Elixir concurrency model. Every singe piece of code from your application is going to run in a process. A Supervisor can check for processes and other supervisors too. That way we can build a hierarchical process structure called supervision tree. Supervision trees are a nice way to structure fault-tolerant applications, to isolate errors when they appear. The main idea of a supervision tree is to have a way to keep our software going in case of errors by just restarting the faulty processes.
 
 ![shared](/images/functional-programming/erlang/supervision-tree-example.png)
 
@@ -28,7 +28,7 @@ If a worker dies, the supervisor can restart the dead worker and its children if
 
 * simple one for one: - similar to :one_for_one but suits better when dynamically attaching children. This strategy requires the supervisor specification to contain only one child.
 
-Once a process has died the supervisor will try to restart it again, if it keeps dying it will keep trying until it reaches the max number of restarting in a period of time. This is a parameter option that will be passed to the supervisor when it is created, if a supervisor reaches that number it will gives up and terminates. The main reason here is that you don’t want your Supervisor to infinitely restart its children when something is genuinely wrong in your code or application.
+Once a process has died the supervisor will try to restart it again, if it keeps dying it will keep trying until it reaches the max number of restarting in a period of time. This is a parameter option that will be passed to the supervisor when it is created, if a supervisor reaches that number it will gives up and terminates. The main reason for that is that you don’t want your Supervisor to infinitely restart its children when something is genuinely wrong in your code or application.
 
 Supervisors have a very simple job and they are very old, they were first implemented more than 20 years ago in Erlang, so they have gone through all kind of testing and are very solid and stable process, as a consequence they are very unlikely to crash. The beautiful outcome of this is, when something inevitably goes wrong in one of the leaves or the branches of the tree, the problem is isolated and easily recovered without disturbing the rest of the application.
 
@@ -76,7 +76,7 @@ The first supervisor will check the worker in charge of keeping  the endpoint up
 
 ![shared](/images/functional-programming/erlang/supervision-tree-mailer-worker-crashed.jpg)
 
-As we can see in the picture, the mailer process has crashed, but the fact that the mailer process has crashed and we can’t send emails anymore, it shouldn’t affect people making calls to the API to fetch or save some data, they are functionally independent from each other, so errors in one place shouldn’t affect the other. Right after the crash, the mailer supervisor will try to restart the worker again, if it doesn't succeed, it will keep trying until it reaches the max number of restarting in a period of time.
+As we can see in the picture, the mailer process has crashed, but the fact that the mailer process has crashed and we can’t send emails anymore, it shouldn’t affect people making calls to the API to fetch or save data. They are functionally independent from each other, so errors in one place shouldn’t affect the other. Right after the crash, the mailer supervisor will try to restart the mail worker again, if it doesn't succeed, it will keep trying until it reaches the max number of restarting in a period of time.
 
 {% highlight ruby %}
 
@@ -85,7 +85,7 @@ Supervisor.start_link(children, opts)
 
 {% endhighlight %}
 
-In this last bit of code is where we start the main supervisor, the Gen server supervisor that will supervise all the children supervisors with the strategy selected. If any of the child supervisors die, then the main supervisor will restart the dead supervisor. But who supervise the main supervisor ? what happen if the main supervisor die ? Well if the main supervisor die, then we will be in trouble at this point, but as we mentioned before you will rarely see a supervisor dying.
+In this last bit of code is where we start the main supervisor, the Gen server supervisor that will supervise all the children supervisors with the strategy selected. If any of the children, then the main supervisor will restart the dead ones. But who supervise the main supervisor ? what happen if the main supervisor die ? Well if the main supervisor die, then we will be in trouble at this point, but as we mentioned before you will rarely see a supervisor dying.
 
 This a fairly basic introduction the the world of supervisors and the supervision tree, if you want to know more about it, I definitely recommend you to have a look at
 [learn you some Erlang - supervisors](http://learnyousomeerlang.com/supervisors)
@@ -93,7 +93,7 @@ This a fairly basic introduction the the world of supervisors and the supervisio
 
 ### Final thoughts
 
-Fault tolerant systems like Erlang and Elixir will monitor your system silently in the background and they will react to failures, restarting a process if they crash. The beautiful outcome of this is that if your system crashes for unknown reasons, your customers won't notice unless there is something genuinely wrong with your code, and the process keep crashing until Erlang give up. On top of that even if if there is something genuinely wrong with a particular bit of code, Elixir and Erlang will isolate the problem so the only part of your system affected will be the one related to that particular process. All of this is handle by the supervision tree, and the best part of it is that it all comes for free with Erlang and Elixir.
+Fault tolerant systems like Erlang and Elixir will monitor your system silently in the background and they will react to failures, restarting a process if they crash. The beautiful outcome of this is that if your system crashes for unknown reasons, your customers won't notice unless there is something genuinely wrong with your code, and the process keep crashing over and over again until Erlang give up. On top of that even if there is something genuinely wrong with a particular bit of code, Elixir and Erlang will isolate the problem so the only part of your system affected will be the one related to that particular process. All of this is handle by the supervision tree, and the best part of it is that it all comes for free with Erlang and Elixir.
 
 <b>References</b>
 
