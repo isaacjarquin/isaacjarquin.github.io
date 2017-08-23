@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Supervision Tree
-date:   2017-08-03 10:00:00
+date:   2017-09-01 10:00:00
 author: Isaac Jarquin
 categories: software
 excerpt:  Introduction to supervision trees in Erlang and Elixir.
