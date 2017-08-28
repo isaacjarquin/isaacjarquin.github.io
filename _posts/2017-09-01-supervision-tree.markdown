@@ -6,7 +6,7 @@ author: Isaac Jarquin
 categories: software
 excerpt:  Introduction to supervision trees in Erlang and Elixir.
 comments: true
-resume: "In one of my previous post (Let it) we talk about how good Elixir and Erlang were at fault tolerance, and how they could restart an app when the app crashes so our customers wouldn’t notice any issues. We also mentioned that all of this was handle by the supervision tree ..."
+resume: "In one of my previous post (Let it crash) we talked about how good Erlang and Elixir are at fault tolerance, and how they could restart an app when it crashes, so it wouldn’t cause any impact in our customers. We also mentioned that all of this was handled by the supervision tree ..."
 ---
 
 ## Have you try turn it off and on again ?
