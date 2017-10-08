@@ -102,7 +102,7 @@ I know that the conditional is still being used, but things are starting to look
 {% highlight ruby %}
 
 const nonHardwareProductsHasMissingContent = products => {
-    return customerProducts.filter(isNotHardware).some(hasMissingContent);
+    return products.filter(isNotHardware).some(hasMissingContent);
 };
 
 {% endhighlight %}
