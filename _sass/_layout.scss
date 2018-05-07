@@ -10,17 +10,17 @@
     // Positioning context for the mobile navigation icon
     position: relative;
     min-height: 60px;
+
+    .wrapper {
+      text-align: center;
+    }
 }
 
 .site-title {
     font-size: 30px;
     font-weight: 300;
-    line-height: 56px;
-    letter-spacing: -1px;
     margin-bottom: 0;
-    float: left;
-    position: absolute; /* or absolute */
-    left: 40%;
+    position: relative;; /* or absolute */
     color: white;
 
     &,
@@ -221,7 +221,7 @@
     }
 
     &:hover {
-       color: black; 
+       color: black;
     }
 }
 
